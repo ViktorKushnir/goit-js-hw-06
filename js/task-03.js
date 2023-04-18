@@ -18,8 +18,15 @@ const gallery = document.querySelector(".gallery");
 const galaryNew = images.reduce(
   (markup, { alt, url }) =>
     markup +
-    `<li><img src="${url}" alt="${alt}" width = "350" height = "auto"></li>`,
+    `<li><img src="${url}" alt="${alt}" width = "350" height = "250"></li>`,
   ""
 );
 
 gallery.insertAdjacentHTML("beforeend", galaryNew)
+
+gallery.style.display = "flex"
+gallery.style.gap = "30px";
+gallery.style.listStyle = "none";
+gallery.style.justifyContent = "center";
+gallery.style.alignItems = "center";
+
